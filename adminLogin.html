@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" style="text/css" href="admin.css">
+<link rel="stylesheet" style="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="bootmodal.css">
+<meta charset="ISO-8859-1">
+<title>AdminDashboard</title>
+
+
+</head>
+<body style="background-color: #d3d3d3">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+
+<div data-ng-app="app" data-ng-controller="admincont" style="margin-top:50px;">
+<h1>
+	Welcome
+	
+	
+</h1>
+<button class="button" style="float: right; font-size: 20px;margin-right: 22px;background-color: #aaa;font-family: sans-serif; ;" type="submit" onclick="logout()">LOGOUT</button>	
+	<div id="menu">
+		<nav style="margin-top: 20px">
+			<div class="menu-item">
+     			 <h4><a href="viewRooms.html">View Room Details</a></h4>
+   			</div>
+    		
+    		<div class="menu-item alpha">
+      			<h4>Sensor Management</a></h4>
+      			<ul>
+        			<li><a href="editsensor.html">Add Sensor</a></li>
+        			<li><a href="viewsensors.html">View Sensors</a></li>
+        		</ul>
+			</div>
+      
+    		<div class="menu-item">
+      			<h4>Room Management</h4>
+     			 <ul>
+        			<li><a href="addroom.html">Add Room</a></li>
+        			<li><a href="deleteroom.html">Delete Room</a></li>
+      			</ul>
+    		</div>
+      
+    		<div class="menu-item">
+      			<h4>User Management</h4>
+      			<ul>
+        			<li><a href="adduser.html">Add User</a></li>
+        			<li><a href="deleteuser.html">Delete User</a></li>
+        			<li><a href="editeduser.html">Edit User</a></li>
+        			<li><a href="showusers.html">Show Users</a></li>
+        			 
+      			</ul>
+    		</div>
+		</nav>
+	</div>
+	
+	<div>	
+		<img  id="admindashboard" alt="conference roonm" src="images/conference1.jpg">
+	</div>
+
+
+</div>
+<script type="text/javascript">
+function logout(){
+	
+	 window.location.replace("welcome.html");
+	
+}
+
+</script>
+
+</body>
+</html>

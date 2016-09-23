@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<script>
+function fun(){
+
+
+ var dateString1=document.getElementById("fdate").value;
+
+var myDate1 = new Date(dateString1);
+  
+var dateString2=document.getElementById("tdate").value;
+
+var myDate2 = new Date(dateString2);  
+var today = new Date();  
+
+if(dateString1=="" || dateString2=="") 
+{ 
+	alert("Please select both the date from the calendar."); 
+}  
+
+else if (myDate1>today)  
+{   
+alert("Please select a Past date from the calendar."); 
+
+}
+else if (myDate1>today)  
+{   
+alert("Please select a Past date from the calendar."); 
+
+}
+else if (myDate1>myDate2)  
+{   
+alert("from date can not exceed to date."); 
+
+}
+//document.getElementById("form1").submit();// Form submission
+
+}
+
+</script>
+</head>
+<body>
+<form id="form1">
+ from date :<input type="date" value="select date1" id="fdate" >
+ To date :<input type="date" value="select date2" id="tdate" >
+<button onclick="fun()">click</button>
+</form>
+</body>

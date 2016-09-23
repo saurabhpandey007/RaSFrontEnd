@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ <html data-ng-app="chartApp">
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" style="text/css" href="admin.css">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+      <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+      
+    </head>
+      <body style="background-color:#d3d3d3;">
+
+        <div style="background-color: #d3d3d3; height: 100%;width: 100%;">
+	       
+	        <div style="height: 100Px;width: 100%;"><p style="padding-left: 20px"><font size="5" color="#292f33" >Welcome Monitoring User!</font></p>
+	        
+	        </div>
+	        
+	        <div style="height: 90%;width: 100%;" id="menu-item">
+	        	<div style="float: left;height: 100%;width: 30%;">
+	        	
+	     	<div class="menu-item" style="background-color: #d3d3d3">
+              		<h4>Home</h4>
+              		<ul>
+              			<li><a href="#/">Home</a></li>
+        			</ul>
+    		</div>		
+    			
+	     	<div class="menu-item" style="background-color: #d3d3d3">
+      			<h4>Sensor Monitoring</h4>
+     			 <ul>
+        			<li><a href="#/sensorDetail" >View Sensor Detail</a></li>
+        			
+      			</ul>
+    		</div>	
+      
+    		<div class="menu-item" style="background-color: #d3d3d3">
+      			<h4>Api Monitoring</h4>
+      			<ul>
+        			<li><a href="#/apiHelth">View Api Health</a></li>
+       			</ul>
+    		</div>
+	        
+	        
+	       		 </div>
+	                 
+		         <div id="main" data-ng-view style="float:right;height: 100%;width: 70%">          
+				</div>
+			 </div>
+	        
+        </div>
+        
+        
+		
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-route.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="script.js"></script>
+ 
+    </body>
+    </html>

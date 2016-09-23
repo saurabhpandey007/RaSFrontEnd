@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" style="text/css" href="admin.css">
+<link rel="stylesheet" type="text/css" href="bootmodal.css"> 
+<meta charset="ISO-8859-1">
+<title>delete User</title>
+</head>
+<body style="background-color: #d3d3d3">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="notify.min.js"></script>
+	<script type="text/javascript" src="bootbox.min.js"></script>
+	
+<div data-ng-app="app" data-ng-controller="deleteuser" style = "margin-top : 50px">
+<div id="menu" style="float: left;">
+		<nav style="margin-top: 65px">
+			<div class="menu-item">
+     			 <h4><a href="viewRooms.html">View Room Details</a></h4>
+   			</div>
+    		
+    		<div class="menu-item alpha">
+      			<h4>Sensor Management</h4>
+      			<ul>
+        			<li><a href="editsensor.html">Add Sensor</a></li>
+        			<li><a href="viewsensors.html">View Sensors</a></li>
+        		</ul>
+			</div>
+      
+    		<div class="menu-item">
+      			<h4>Room Management</h4>
+     			 <ul>
+        			<li><a href="addroom.html">Add Room</a></li>
+        			<li><a href="deleteroom.html">Delete Room</a></li>
+      			</ul>
+    		</div>
+      
+    		<div class="menu-item">
+      			<h4>User Management</h4>
+      			<ul>
+        			<li><a href="adduser.html">Add User</a></li>
+        			<li><a href="deleteuser.html">Delete User</a></li>
+        			<li><a href="editeduser.html">Edit User</a></li>
+        			<li><a href="showusers.html">Show Users</a></li>
+      			</ul>
+    		</div>
+		</nav>
+	</div>
+	<div id="delete_user" ><br>
+	<pre class="input">User Id:	<input type="text" name="uname" data-ng-model = "user.userId"><br></pre><br>
+	<pre class="input">User Name:	<input type="text" name="uname" data-ng-model = "user.userName"><br></pre><br>
+	<button id="deleteroom" data-ng-click="deletefun()">Delete</button>
+</div>
+</div>
+<h3>
+		<a href="adminLogin.html">HOME PAGE</a>
+	</h3>
+	
+<script src = "users.js">
+</script>
+
+</body>
+</html>

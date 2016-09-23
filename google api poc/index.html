@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	</head>
+  <body>
+     <div ng-controller="MyCtrl">
+        <input ng-model="data[0]" type="text"> <br>
+        <input ng-model="data[1]" type="text"> <br>
+        <input ng-model="data[2]" type="text"> <br>
+       {{data[0]}},{{data[1]}},{{data[2]}}
+    </div>
+    
+	<script>
+		var myApp = angular.module('myApp',[]);
+
+		angular.module('myApp').controller('MyCtrl',['$scope',function($scope) {
+			$scope.data = [];
+		}]); 
+	</script>
+  </body>
+ 
+</html>

@@ -1,0 +1,120 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	var arrs = ['choose type','Lux','Temprature','Humidity','Pressure','IR'];
+	var temparr = arrs.slice();
+     function configureDropDownLists(ddl1) {
+	
+	var num_of_sensor=parseInt(ddl1.value);
+	
+	if(num_of_sensor==1)
+		{
+			$("select#ddl3").hide();
+			$("select#ddl4").hide();
+			$("select#ddl5").hide();
+			$("select#ddl6").hide();
+			$("select#ddl2").show();
+		}
+	if(num_of_sensor==2)
+		{	$("select#ddl4").hide();
+			$("select#ddl5").hide();
+			$("select#ddl6").hide();
+			$("select#ddl2").show();
+			$("select#ddl3").show();
+		}
+	if(num_of_sensor==3)
+		{	
+			$("select#ddl5").hide();
+			$("select#ddl6").hide();
+			$("select#ddl2").show();
+			$("select#ddl3").show();
+			$("select#ddl4").show();
+			
+		}
+	if(num_of_sensor==4)
+		{
+			$("select#ddl6").hide();
+			$("select#ddl2").show();
+			$("select#ddl3").show();
+			$("select#ddl4").show();
+			$("select#ddl5").show();
+			
+		}
+	if(num_of_sensor==5)
+		{
+			$("select#ddl2").show();
+			$("select#ddl3").show();
+			$("select#ddl4").show();
+			$("select#ddl5").show();
+			$("select#ddl6").show();
+			
+		}
+	}
+	function populateList(currentList,nextList)
+	{
+		temparr=removeA(temparr,currentList.value);
+		nextList.options.length = 0;
+            for (i = 0; i < temparr.length; i++) {
+                createOption(nextList, temparr[i], temparr[i]);
+				
+            }
+						
+			
+		
+	}
+
+    function removeA(arr,val) {
+	
+    var what, a = arguments, L = a.length, ax;
+	what=val;
+    while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax= arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1);
+        }
+    }
+    return arr;
+}
+   function createOption(ddl, text, value) {
+        var opt = document.createElement('option');
+        opt.value = value;
+        opt.text = text;
+        ddl.options.add(opt);
+    }
+</script>
+</head>
+<body>
+<select id="ddl1" onchange="configureDropDownLists(this)">
+<option value="choose number">choose number</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+
+<select id="ddl2" onchange="populateList(this,document.getElementById('ddl3'))" class="type">
+<option value="choose type">choose type</option>
+<option value="Lux">Lux</option>
+<option value="Temprature">Temprature</option>
+<option value="Humidity">Humidity</option>
+<option value="Pressure">Pressure</option>
+<option value="IR">IR</option>
+
+
+</select>
+
+
+<select id="ddl3" onchange="populateList(this,document.getElementById('ddl4'))" class="type"></select><select id="ddl4" onchange="populateList(this,document.getElementById('ddl5'))" class="type"></select><select id="ddl5" onchange="populateList(this,document.getElementById('ddl6'))" class="type"></select></select><select id="ddl6" onchange="populateList(this)" class="type"></select>
+<script>$(document).ready(function() {
+    $("select#ddl2").hide();
+	$("select#ddl3").hide();
+	$("select#ddl4").hide();
+	$("select#ddl5").hide();
+	$("select#ddl6").hide();
+});
+</script>
+</body>
+</html>

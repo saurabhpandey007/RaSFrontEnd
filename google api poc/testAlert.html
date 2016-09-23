@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title>Hello World, AngularJS - ViralPatel.net</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="notify.min.js"></script>
+	<script type="text/javascript" src="bootbox.min.js"></script>
+</head>
+<body>
+<div ng-controller="ContactController">
+	 Email:<input type="text" ng-model="newcontact"/>
+	<button ng-click="add()">Add</button>
+	<button ng-click="check()">check alert</button>
+	<h2>Contacts</h2>
+
+	<ul>
+		<li ng-repeat="contact in contacts"> {{ contact }} </li>
+	</ul>
+
+</div>
+<script type="text/javascript">
+	function ContactController($scope) {
+	    $scope.contacts = ["hi@email.com", "hello@email.com"];
+
+	    $scope.add = function() {
+		$scope.contacts.push($scope.newcontact);
+		$scope.newcontact = "";
+	    }
+		$scope.check = function() {
+		bootbox.confirm("Are you sure you want to delete the author?", function(result) {
+            if (result == true)
+			{
+				alert('hello in true');
+			}
+			});
+		
+		
+	    }
+		
+	}
+</script>
+</body>
+</html>
